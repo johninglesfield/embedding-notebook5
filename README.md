@@ -1,2 +1,2 @@
 # embedding-notebook5
-This notebook contains Python
+This Jupyter notebook contains examples of relativistic embedding, as described in chapter 8 of my book, "The Embedding Method for Electronic Structure". Examples are given of the H-atom in a spherical cavity, with embedding results compared with the exact solution, and the relativistic density of states in a one-dimensional square well. The notebook uses the numpy and scipy libraries.
