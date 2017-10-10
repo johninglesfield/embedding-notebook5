@@ -11835,7 +11835,7 @@ We calculate the bound states for hydrogen, with $\lambda = 1$; the states are l
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In the following cell we calculate the energy eigenvalues for this system, using the basis functions given by eq. (8.46). We are asked to input the number of basis functions $N$ of each kind (large and small components, so that the total number of basis functions is $2N$), and the trial energy $\epsilon$ (the trial mass-energy is given by $w=\epsilon+m_ec^2$). After the lines of input, the program calculates the embedding potential at this trial energy, then the matrix elements, and finally the eigenvalues. These are output in a table giving the energies $E_i$, defined in terms of the mass-energy eigenvalues $W_i$ as $E_i=W_i-m_ec^2$. Note that $N$ should be no greater than 8 or 9, otherwise the results become unstable &ndash; presumably because of linear dependencies.</p>
 <p>In the eigenvalue list, the first $N$ values are very large and negative, and correspond to hole energies pushed down by the choice of <em>balanced</em> basis functions. With the same parameters, the next two energies agree exactly with Crampin's results for the 1s$_{1/2}$ and 2s$_{1/2}$ states of the confined H-atom.</p>
-<p>So that we can study convergence, and behaviour of the energies with trial energy, we can re-run the cell and the results for the lowest two (electron) eigenvalues are accumulated in a table printed at the end of the cell. We also calculate the exact energies, using wave-function matching, further down in this notebook. This enables us to compare the embedding approach with exact values for other states as well as s$_{1/2}$.</p>
+<p>So that we can study convergence, and the variation of the eigenvalues with trial energy, we can re-run the cell and the results for the lowest two (electron) eigenvalues are accumulated in a table printed at the end of the cell. We also calculate the exact energies, using wave-function matching, further down in this notebook. This enables us to compare the embedding approach with exact values for other states as well as s$_{1/2}$.</p>
 
 </div>
 </div>
@@ -11917,7 +11917,6 @@ _____________________________________
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Exact-solution">Exact solution<a class="anchor-link" href="#Exact-solution">&#182;</a></h4><p>We can compare these results with the exact results obtained by wave-function matching across the boundary between regions I and II. The function <code>h_match</code> in the Relativity class evaluates the ratio of the large to small components of the internal (H-atom) and external (square well) solutions of the Dirac equation at the boundary, $r=R$. This function returns the difference between the ratios $\Delta$ for a given energy $E$, and the energy eigenvalues correspond to $\Delta(E)=0$. We first plot $\Delta$ as a function of $E$ to detemine the required eigenvalue graphically, and then find the eigenvalue more accurately by bisection.<br>
 In the next cell we input the start energy, the finish energy, and the number of energy points for plotting $\Delta(E)$. The calculation of $\Delta(E)$ is then called and the results plotted.</p>
-<p>(Simon Crampin (University of Bath) helped me with the formalism used in the following cells.)</p>
 
 </div>
 </div>
